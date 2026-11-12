@@ -7,7 +7,7 @@ name: publish
 # Only `upload` names that environment, and it `needs: gate`.
 #
 # BEFORE THE FIRST RUN, on PyPI: add a PENDING publisher (the project does not
-# exist yet) with project `invisible-selenium`, owner `feder-cr`, repository `invisible_selenium`,
+# exist yet) with project `invisible-selenium`, owner `oss-invisible`, repository `selenium`,
 # workflow `publish.yml`, environment `pypi`. Until then the upload fails with
 # `invalid-publisher`, which is the correct failure.
 #
@@ -339,14 +339,13 @@ jobs:
           # A body that is only whitespace reads as a page nobody wrote. Say what
           # is true instead: the version, and where the artifacts actually are.
           #
-          # The PyPI name is the repository name with hyphens: the repo is
-          # `invisible_selenium` and the project is `invisible-selenium`.
-          # PyPI redirects the underscore form, so getting this wrong would have
-          # produced a link that works and is still wrong to read. And no
+          # The PyPI project is `invisible-selenium` while the repository is just
+          # `selenium`, so the name is written out here, not derived from the
+          # repository. And no
           # backticks in the body - they would be command substitution inside a
           # double-quoted shell string, which is how fourteen quoted terms once
           # became empty strings.
-          PKG=$(printf '%s' "${{ github.event.repository.name }}" | tr '_' '-')
+          PKG=invisible-selenium
           if [ -z "$(tr -d '[:space:]' < /tmp/notes.md)" ]; then
             printf '%s\n' \
               "$PKG $VERSION is on PyPI." \

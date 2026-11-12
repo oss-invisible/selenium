@@ -1,12 +1,12 @@
 
 <div align="center">
 <picture>
-  <source media="(max-width: 374px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/feder-cr/invisible_selenium/main/docs/banner-small-dark.gif">
-  <source media="(max-width: 374px)" srcset="https://raw.githubusercontent.com/feder-cr/invisible_selenium/main/docs/banner-small-light.gif">
-  <source media="(max-width: 1239px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/feder-cr/invisible_selenium/main/docs/banner-phone-dark.gif">
-  <source media="(max-width: 1239px)" srcset="https://raw.githubusercontent.com/feder-cr/invisible_selenium/main/docs/banner-phone-light.gif">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/feder-cr/invisible_selenium/main/docs/banner-dark.gif">
-  <img alt="invisible_selenium, Selenium's API on an anti-detect Firefox. An animation: the import that changes, the fingerprint set inside the engine, a mouse that moves like a hand, and the options for a reproducible run." src="https://raw.githubusercontent.com/feder-cr/invisible_selenium/main/docs/banner-light.gif" width="100%">
+  <source media="(max-width: 374px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oss-invisible/selenium/main/docs/banner-small-dark.gif">
+  <source media="(max-width: 374px)" srcset="https://raw.githubusercontent.com/oss-invisible/selenium/main/docs/banner-small-light.gif">
+  <source media="(max-width: 1239px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oss-invisible/selenium/main/docs/banner-phone-dark.gif">
+  <source media="(max-width: 1239px)" srcset="https://raw.githubusercontent.com/oss-invisible/selenium/main/docs/banner-phone-light.gif">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oss-invisible/selenium/main/docs/banner-dark.gif">
+  <img alt="invisible_selenium, Selenium's API on an anti-detect Firefox. An animation: the import that changes, the fingerprint set inside the engine, a mouse that moves like a hand, and the options for a reproducible run." src="https://raw.githubusercontent.com/oss-invisible/selenium/main/docs/banner-light.gif" width="100%">
 </picture>
 <h3 align="center">Selenium gets caught by anti-bots and captchas.<br>
 This one runs on an anti-detect Firefox with an undetected fingerprint, compatible with your existing Selenium code.</h3>
@@ -97,7 +97,7 @@ driver = webdriver.Firefox(
 )
 ```
 
-Proxies can be `socks5`, `socks4`, `http` or `https`, and DNS goes through them too. `FirefoxOptions` work as they do in Selenium, `-headless` included. The fields you can pin are the same as in invisible_playwright: **[pinning](https://github.com/feder-cr/invisible_playwright/blob/main/docs/pinning.md)**.
+Proxies can be `socks5`, `socks4`, `http` or `https`, and DNS goes through them too. `FirefoxOptions` work as they do in Selenium, `-headless` included. The fields you can pin are the same as in invisible_playwright: **[pinning](https://github.com/oss-invisible/playwright/blob/main/docs/pinning.md)**.
 
 ## CLI
 
@@ -110,15 +110,15 @@ invisible-selenium version    # wrapper, core and engine versions
 
 ## Related projects
 
-- **[invisible_playwright](https://github.com/feder-cr/invisible_playwright)**: the same engine with Playwright's API, and **[the guides](https://github.com/feder-cr/invisible_playwright/blob/main/docs/guides.md)** on how detection works.
-- **[invisible_puppeteer](https://github.com/feder-cr/invisible_puppeteer)**: the same engine with Puppeteer's API, in Python.
-- **[invisible_playwright_mcp](https://github.com/feder-cr/invisible_playwright_mcp)**: the same engine for AI agents, over MCP.
-- **[invisible_core](https://github.com/feder-cr/invisible_core)**: turns a seed into a fingerprint and the fingerprint into Firefox preferences. This package depends on an exact version of it.
-- **[firefox_antidetect_patch](https://github.com/feder-cr/firefox_antidetect_patch)**: the C++ patches that build the browser.
+- **[invisible_playwright](https://github.com/oss-invisible/playwright)**: the same engine with Playwright's API, and **[the guides](https://github.com/oss-invisible/playwright/blob/main/docs/guides.md)** on how detection works.
+- **[invisible_puppeteer](https://github.com/oss-invisible/puppeteer)**: the same engine with Puppeteer's API, in Python.
+- **[invisible_playwright_mcp](https://github.com/oss-invisible/playwright_mcp)**: the same engine for AI agents, over MCP.
+- **[invisible_core](https://github.com/oss-invisible/core)**: turns a seed into a fingerprint and the fingerprint into Firefox preferences. This package depends on an exact version of it.
+- **[firefox_antidetect_patch](https://github.com/oss-invisible/firefox_antidetect_patch)**: the C++ patches that build the browser.
 
 **Switching from another tool?**
 
-- **[selenium-stealth](https://github.com/diprajpatra/selenium-stealth)**: it patches the page from JavaScript, and its last commit is from December 2021. [What that means](https://github.com/feder-cr/invisible_playwright/blob/main/docs/selenium-stealth-unmaintained.md).
+- **[selenium-stealth](https://github.com/diprajpatra/selenium-stealth)**: it patches the page from JavaScript, and its last commit is from December 2021. [What that means](https://github.com/oss-invisible/playwright/blob/main/docs/selenium-stealth-unmaintained.md).
 
 ## Development
 
@@ -126,7 +126,7 @@ The setup and the test commands are in [CONTRIBUTING.md](CONTRIBUTING.md#develop
 
 ## License
 
-MIT, see [LICENSE](LICENSE). The Juggler client it drives the browser with lives in [invisible-core](https://github.com/feder-cr/invisible_core), which carries two files taken from Playwright's driver under Apache-2.0. The patched Firefox binary is MPL-2.0, built from [feder-cr/firefox_antidetect_patch](https://github.com/feder-cr/firefox_antidetect_patch).
+MIT, see [LICENSE](LICENSE). The Juggler client it drives the browser with lives in [invisible-core](https://github.com/oss-invisible/core), which carries two files taken from Playwright's driver under Apache-2.0. The patched Firefox binary is MPL-2.0, built from [oss-invisible/firefox_antidetect_patch](https://github.com/oss-invisible/firefox_antidetect_patch).
 
 ## Disclaimer
 
@@ -136,11 +136,11 @@ This project is for educational purposes only. It is provided as-is, with no war
 
 <p align="center">
   Built by <a href="https://it.linkedin.com/in/federico-elia-5199951b6">Federico Elia</a>
-  &nbsp;<a href="https://it.linkedin.com/in/federico-elia-5199951b6"><img src="https://raw.githubusercontent.com/feder-cr/invisible_playwright/main/docs/badges/linkedin.svg" alt="LinkedIn"></a>
+  &nbsp;<a href="https://it.linkedin.com/in/federico-elia-5199951b6"><img src="https://raw.githubusercontent.com/oss-invisible/playwright/main/docs/badges/linkedin.svg" alt="LinkedIn"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/feder-cr/invisible_selenium/actions/workflows/tests.yml"><img src="https://github.com/feder-cr/invisible_selenium/actions/workflows/tests.yml/badge.svg" alt="tests"></a>
-  <a href="https://github.com/feder-cr/invisible_selenium/blob/main/LICENSE"><img src="https://raw.githubusercontent.com/feder-cr/invisible_playwright/main/docs/badges/license.svg" alt="License: MIT"></a>
-  <a href="https://www.python.org/downloads/"><img src="https://raw.githubusercontent.com/feder-cr/invisible_playwright/main/docs/badges/python.svg" alt="Python 3.11+"></a>
+  <a href="https://github.com/oss-invisible/selenium/actions/workflows/tests.yml"><img src="https://github.com/oss-invisible/selenium/actions/workflows/tests.yml/badge.svg" alt="tests"></a>
+  <a href="https://github.com/oss-invisible/selenium/blob/main/LICENSE"><img src="https://raw.githubusercontent.com/oss-invisible/playwright/main/docs/badges/license.svg" alt="License: MIT"></a>
+  <a href="https://www.python.org/downloads/"><img src="https://raw.githubusercontent.com/oss-invisible/playwright/main/docs/badges/python.svg" alt="Python 3.11+"></a>
 </p>

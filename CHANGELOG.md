@@ -52,7 +52,7 @@ The pin moves to invisible-core 49.46.0. The desktop settings a page can read -
 scrollbars, text scale, drag threshold, double-click selection, the system
 colours in both schemes, the refresh rate, the form-control font and more -
 are declared by the persona instead of read from the machine it runs on, and
-each of them can be pinned (the keys are the ones invisible_playwright documents in its [pinning](https://github.com/feder-cr/invisible_playwright/blob/main/docs/pinning.md) page).
+each of them can be pinned (the keys are the ones invisible_playwright documents in its [pinning](https://github.com/oss-invisible/playwright/blob/main/docs/pinning.md) page).
 
 ### Changed
 - **The way in is uv.** The README installs with one complete block per

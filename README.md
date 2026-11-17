@@ -12,6 +12,11 @@
 This one runs on an anti-detect Firefox with an undetected fingerprint, compatible with your existing Selenium code.</h3>
 </div>
 
+<p align="center">
+<a href="https://decodo.com/deals/residential-offer?utm_medium=affiliate&utm_source=Federico+Elia&promoter_id=15854270&fpr=7859773"><img alt="Decodo residential proxies, free trial (sponsored)" src="https://raw.githubusercontent.com/oss-invisible/selenium/main/docs/decodo-residential-proxies-trial.png" width="560"></a><br>
+<sub>Sponsored</sub>
+</p>
+
 ## How it works
 
 Anti-bots ask two questions, and reCAPTCHA, hCaptcha and Cloudflare Turnstile score the answers. invisible_selenium answers yes to both.

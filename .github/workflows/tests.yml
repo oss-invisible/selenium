@@ -108,6 +108,12 @@ jobs:
   core-on-index:
     uses: ./.github/workflows/core-on-index.yml
 
+  # Every commit this event makes public must carry a GitHub noreply address.
+  # Judged by the core, called from main; pushes to branches without a pull
+  # request and to tags go through noreply-identity.yml.
+  noreply-identity:
+    uses: oss-invisible/core/.github/workflows/noreply-identity.yml@main
+
   unit:
     name: pytest (${{ matrix.os }}, py${{ matrix.python }})
     needs: core-on-index
@@ -169,7 +175,7 @@ jobs:
           PY
 
   gate:
-    needs: [core-on-index, unit, english, claims, way-in, install-job]
+    needs: [core-on-index, unit, english, claims, way-in, install-job, noreply-identity]
     if: always()
     runs-on: ubuntu-latest
     steps:
@@ -181,6 +187,7 @@ jobs:
           echo "claims:        ${{ needs.claims.result }}"
           echo "way-in:        ${{ needs.way-in.result }}"
           echo "install-job:   ${{ needs.install-job.result }}"
+          echo "noreply-identity: ${{ needs.noreply-identity.result }}"
           case "${{ needs.unit.result }}" in
             failure|cancelled) echo "the suite did not pass"; exit 1 ;;
           esac
@@ -198,5 +205,9 @@ jobs:
           esac
           case "${{ needs.install-job.result }}" in
             failure|cancelled) echo "the user-install job would not run on a release, or leaks"; exit 1 ;;
+          esac
+          case "${{ needs.noreply-identity.result }}" in
+            success) ;;
+            *) echo "a commit or tag carries an address that is not a GitHub noreply one"; exit 1 ;;
           esac
           echo "ok"
